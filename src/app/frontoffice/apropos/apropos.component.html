@@ -28,8 +28,9 @@
               <li><a href="#blog-section" class="nav-link">Actualités</a></li>
               <li><a href="#team-section" class="nav-link">Equipe</a></li>
               <li><a href="#contact-section" class="nav-link">Contact</a></li>
-              <li><a href="" class="nav-link">Connexion</a></li>
-              <li><a href="" class="nav-link">Créer compte</a></li>
+              <li><a [routerLink]="['/home/login']"    class="nav-link">Connexion</a></li>
+              <li><a [routerLink]="['/home/register']" class="nav-link">Créer compte</a></li>
+              <li><a [routerLink]="['/dashboard']"    class="nav-link">Admin</a></li>
             </ul>
           </nav>
         </div>
@@ -37,6 +38,7 @@
     </div>
 
   </header>
+  <router-outlet></router-outlet>
   <div class="site-blocks-cover overlay" style="background-image: url(/assets/frontoffice/images/hero_2.jpg);" data-aos="fade"
     id="home-section">
 

@@ -9,6 +9,9 @@ import { PrestationsComponent } from './prestations/prestations.component';
 import { ContactComponent } from './contact/contact.component';
 import { EquipeComponent } from './equipe/equipe.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { FrontComponent } from './front/front.component';
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import { FooterComponent } from './footer/footer.component';
     PrestationsComponent,
     ContactComponent,
     EquipeComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    RegisterComponent,
+    FrontComponent
   ],
   imports: [
     CommonModule,
