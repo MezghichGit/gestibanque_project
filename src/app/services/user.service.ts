@@ -13,4 +13,8 @@ export class UserService {
   createUser(user: any) {
     return this.Http.post(this.urlRegistration, user);
   }
+
+  getAllUsers() {
+    return this.Http.get(environment.baseUrl+"users");
+  }
 }
