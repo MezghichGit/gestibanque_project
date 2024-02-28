@@ -1,0 +1,10 @@
+<form #data="ngForm"  (ngSubmit)="persistActualite(data.value)">
+
+  Titre : <input type="text" ngModel class="form-control" name="titre" />
+  Description: <input type="text" ngModel class="form-control" name="description" />
+  Photo: <input type="text" ngModel class="form-control" name="photo" />
+
+
+ <button type="submit" class="btn btn-primary" value="Ajouter" style="margin-top:5px">Ajouter<i style="margin-left:5px" class="fa fa-plus" aria-hidden="true"></i>
+ </button>
+</form>

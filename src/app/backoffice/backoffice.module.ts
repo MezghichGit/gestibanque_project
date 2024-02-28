@@ -10,6 +10,11 @@ import { ListCompteComponent } from './list-compte/list-compte.component';
 import { ListAgentComponent } from './list-agent/list-agent.component';
 import { AddAgentComponent } from './add-agent/add-agent.component';
 import { LogoutComponent } from './logout/logout.component';
+import { ListActualiteComponent } from './list-actualite/list-actualite.component';
+import { AddActualiteComponent } from './add-actualite/add-actualite.component';
+import { FormsModule } from '@angular/forms';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptorService } from '../services/token-interceptor.service';
 
 
 
@@ -23,10 +28,17 @@ import { LogoutComponent } from './logout/logout.component';
     ListAgentComponent,
     AddAgentComponent,
     LogoutComponent,
+    ListActualiteComponent,
+    AddActualiteComponent,
   ],
   imports: [
     CommonModule,
-    BackofficeRoutingModule
-  ]
+    BackofficeRoutingModule,
+    FormsModule
+  ],
+  providers: [
+
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true }
+  ],
 })
 export class BackofficeModule { }

@@ -9,50 +9,63 @@ import { ListAgentComponent } from './list-agent/list-agent.component';
 import { AddAgentComponent } from './add-agent/add-agent.component';
 import { LogoutComponent } from './logout/logout.component';
 import { AuthGuardService } from '../services/auth-guard.service';
+import { ListActualiteComponent } from './list-actualite/list-actualite.component';
+import { AddActualiteComponent } from './add-actualite/add-actualite.component';
 
 const routes: Routes = [
   {
     path: '',
     component: DashboardComponent,
     canActivate: [AuthGuardService],
-  children:[
-    {
-      path: 'listBanque',
-     component: ListBanqueComponent,
-     canActivate: [AuthGuardService]
-    },
-    {
-      path: 'addBanque',
-     component:AddBanqueComponent,
-     canActivate: [AuthGuardService]
-    },
-    {
-      path: 'listCompte',
-     component: ListCompteComponent,
-     canActivate: [AuthGuardService]
-    },
-    {
-      path: 'addCompte',
-     component:AddCompteComponent,
-     canActivate: [AuthGuardService]
-    }
-    ,
-    {
-      path: 'listAgent',
-     component: ListAgentComponent,
-     canActivate: [AuthGuardService]
-    },
-    {
-      path: 'addAgent',
-     component:AddAgentComponent,
-     canActivate: [AuthGuardService]
-    },
-    {
-      path: 'logout',
-     component:LogoutComponent,
-     canActivate: [AuthGuardService]
-    }
-  ]
+    children: [
+      {
+        path: 'listBanque',
+        component: ListBanqueComponent,
+        canActivate: [AuthGuardService]
+      },
+      {
+        path: 'addBanque',
+        component: AddBanqueComponent,
+        canActivate: [AuthGuardService]
+      },
+      {
+        path: 'listCompte',
+        component: ListCompteComponent,
+        canActivate: [AuthGuardService]
+      },
+      {
+        path: 'addCompte',
+        component: AddCompteComponent,
+        canActivate: [AuthGuardService]
+      }
+      ,
+      {
+        path: 'listAgent',
+        component: ListAgentComponent,
+        canActivate: [AuthGuardService]
+      },
+      {
+        path: 'addAgent',
+        component: AddAgentComponent,
+        canActivate: [AuthGuardService]
+      },
+      {
+        path: 'logout',
+        component: LogoutComponent,
+        canActivate: [AuthGuardService]
+      },
+      {
+        path: 'listActualite',
+        component: ListActualiteComponent,
+        canActivate: [AuthGuardService]
+      }
+      ,
+      {
+        path: 'addActualite',
+        component: AddActualiteComponent,
+        canActivate: [AuthGuardService]
+      }
+    ]
   }
 ];
 

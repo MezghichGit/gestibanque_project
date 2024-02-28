@@ -11,6 +11,7 @@ export class TokenInterceptorService implements HttpInterceptor {
   constructor() { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
+   
     //console.log("Interception In Progress"); // Interception Stage
     const token:any = sessionStorage.getItem('jwtToken');
     //console.log(token);

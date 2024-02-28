@@ -1,0 +1,57 @@
+<div class="container-fluid">
+
+  <!-- Page Heading -->
+  <h1 class="h3 mb-2 text-gray-800">Actualités</h1>
+  <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
+    For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official
+      DataTables documentation</a>.</p>
+
+      Pour Ajouter une actualité clique ici <button class="btn btn-primary" (click)="addActualite()">Ajouter</button>
+      <br/><br/>
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Liste des actualités</h6>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Titre</th>
+              <th>Description</th>
+              <th>Date</th>
+              <th>Photo</th>
+              <th>Supprimer</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>ID</th>
+              <th>Titre</th>
+              <th>Description</th>
+              <th>Date</th>
+              <th>Photo</th>
+              <th>Supprimer</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr *ngFor="let actualite of actualites">
+              <td>{{actualite.id}}</td>
+              <td>{{actualite.titre}}</td>
+              <td>{{actualite.description}}</td>
+              <td>{{actualite.dateCreation}}</td>
+              <td>{{actualite.photo}}</td>
+              <td>Supprimer</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- /.container-fluid -->
