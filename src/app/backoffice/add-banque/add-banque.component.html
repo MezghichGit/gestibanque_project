@@ -1,1 +1,12 @@
-<p>add-banque works!</p>
+<form #data="ngForm"  (ngSubmit)="persistBanque(data.value)">
+
+  Nom: <input type="text" ngModel class="form-control" name="nom" />
+  Adresse: <input type="text" ngModel class="form-control" name="adresse" />
+  Logo: <input type="text" ngModel class="form-control" name="logo" />
+  Capital: <input type="text" ngModel class="form-control" name="capital" />
+
+
+ <button type="submit" class="btn btn-primary" value="Ajouter" style="margin-top:5px">Ajouter<i style="margin-left:5px" class="fa fa-plus" aria-hidden="true"></i>
+ </button>
+</form>
+
