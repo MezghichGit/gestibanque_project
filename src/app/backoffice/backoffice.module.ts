@@ -9,6 +9,7 @@ import { AddCompteComponent } from './add-compte/add-compte.component';
 import { ListCompteComponent } from './list-compte/list-compte.component';
 import { ListAgentComponent } from './list-agent/list-agent.component';
 import { AddAgentComponent } from './add-agent/add-agent.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 
@@ -21,6 +22,7 @@ import { AddAgentComponent } from './add-agent/add-agent.component';
     ListCompteComponent,
     ListAgentComponent,
     AddAgentComponent,
+    LogoutComponent,
   ],
   imports: [
     CommonModule,
