@@ -20,6 +20,7 @@
               <th>Capital</th>
               <th>Adresse</th>
               <th>Logo</th>
+              <th>Mise à jour</th>
               <th>Supprimer</th>
             </tr>
           </thead>
@@ -30,6 +31,7 @@
               <th>Capital</th>
               <th>Adresse</th>
               <th>Logo</th>
+              <th>Mise à jour</th>
               <th>Supprimer</th>
             </tr>
           </tfoot>
@@ -40,7 +42,8 @@
               <td>{{banque.capital}}</td>
               <td>{{banque.adresse}}</td>
               <td>{{banque.logo}}</td>
-              <td>Supprimer</td>
+              <td><a class="btn btn-warning" (click)="updateBanque(banque)">Mise à jour</a></td>
+              <td><a class="btn btn-danger" (click)="deleteBanque(banque)">Supprimer</a></td>
             </tr>
 
           </tbody>

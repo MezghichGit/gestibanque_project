@@ -30,4 +30,8 @@ export class ListActualiteComponent {
       this.refreshListActus();
     })
   }
+
+  updateActu(actualite: any) {
+
+  }
 }

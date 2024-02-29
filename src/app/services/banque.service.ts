@@ -9,10 +9,14 @@ export class BanqueService {
   constructor(private Http: HttpClient) { }
 
   createBanque(banque: any) {
-    return this.Http.post(environment.baseUrl+"banques", banque);
+    return this.Http.post(environment.baseUrl + "banques", banque);
   }
 
   getAllBanques() {
-    return this.Http.get(environment.baseUrl+"banques");
+    return this.Http.get(environment.baseUrl + "banques");
+  }
+
+  deleteBanque(idBanque: any) {
+    return this.Http.delete(environment.baseUrl + "banques/" + idBanque)
   }
 }

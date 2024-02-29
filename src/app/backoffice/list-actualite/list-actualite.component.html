@@ -19,6 +19,7 @@
               <th>Description</th>
               <th>Date</th>
               <th>Photo</th>
+              <th>Mise à jour</th>
               <th>Supprimer</th>
             </tr>
           </thead>
@@ -29,6 +30,7 @@
               <th>Description</th>
               <th>Date</th>
               <th>Photo</th>
+              <th>Mise à jour</th>
               <th>Supprimer</th>
             </tr>
           </tfoot>
@@ -39,6 +41,7 @@
               <td>{{actualite.description}}</td>
               <td>{{actualite.dateCreation}}</td>
               <td>{{actualite.photo}}</td>
+              <td><a class="btn btn-warning" (click)="updateActu(actualite)">Mise à jour</a></td>
               <td><a class="btn btn-danger" (click)="deleteActu(actualite)">Supprimer</a></td>
             </tr>
 

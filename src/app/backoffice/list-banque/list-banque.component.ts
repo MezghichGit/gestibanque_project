@@ -17,7 +17,7 @@ export class ListBanqueComponent {
     this.service.getAllBanques().subscribe(
       (response:any) => {
         this.banques = response;
-        console.log(this.banques);
+        //console.log(this.banques);
       }
     );
   }
@@ -25,4 +25,13 @@ export class ListBanqueComponent {
   addBanque(){
     this.router.navigate(['/dashboard/addBanque']);
   }
+
+  deleteBanque(banque: any) {
+    this.service.deleteBanque(banque.id).subscribe(response => {
+      //console.log(response);
+      this.refreshListBanques();
+    })
+  }
+
+  updateBanque(banque:any){}
 }
