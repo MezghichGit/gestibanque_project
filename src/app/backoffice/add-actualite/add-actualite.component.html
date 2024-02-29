@@ -1,10 +1,49 @@
-<form #data="ngForm"  (ngSubmit)="persistActualite(data.value)">
+<div class="container-fluid">
 
-  Titre : <input type="text" ngModel class="form-control" name="titre" />
-  Description: <input type="text" ngModel class="form-control" name="description" />
-  Photo: <input type="text" ngModel class="form-control" name="photo" />
+  <!-- Page Heading -->
+  <h1 class="h3 mb-2 text-gray-800">Gestion des Actualités</h1>
+
+  <p>Cette interface vous permetra de créer une nouvelle actualité dans la base de données. Ce travail intitulé GestiBanque s'inscrit dans le cadre du projet du Cursus Java 2024</p>
+  <div class="card o-hidden border-0 shadow-lg my-12">
+      <div class="card-body p-0">
+          <!-- Nested Row within Card Body -->
+          <div class="row">
+
+              <div class="col-lg-12">
+                  <div class="p-5">
+                      <div class="text-center">
+                          <h1 class="h4 text-gray-900 mb-12">Créer une nouvelle actualité !</h1>
+                      </div>
+                      <form #data="ngForm"  (ngSubmit)="persistActualite(data.value)" class="user">
+                          <div class="form-group row">
+                              <div class="col-12">
+                                  Titre :<input type="text" ngModel name="titre" class="form-control form-control-user" id="#"
+                                      placeholder="Titre actualité">
+                              </div>
+                              <div class="col-12">
+                                Description :<input type="text" ngModel name="description" class="form-control form-control-user" id="#"
+                                    placeholder="Description actualité">
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <div class="col-12">
+                                Photo :<input type="text" ngModel name="photo" class="form-control form-control-user" id="#"
+                                    placeholder="Photo actualité">
+                            </div>
+
+                        </div>
 
 
- <button type="submit" class="btn btn-primary" value="Ajouter" style="margin-top:5px">Ajouter<i style="margin-left:5px" class="fa fa-plus" aria-hidden="true"></i>
- </button>
-</form>
+                          <input type="submit" class="btn btn-primary btn-user btn-block" value="Créer actualité" />
+
+                      </form>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+</div>
+

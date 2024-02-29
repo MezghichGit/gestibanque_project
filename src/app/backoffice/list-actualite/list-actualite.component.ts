@@ -9,20 +9,25 @@ import { Router } from '@angular/router';
 })
 export class ListActualiteComponent {
   constructor(private service: ActualiteService, private router: Router) { }
-  actualites:any;
+  actualites: any;
   ngOnInit() {
-    this.refreshListComptes();
+    this.refreshListActus();
   }
-  refreshListComptes() {
+  refreshListActus() {
     this.service.getAllActualites().subscribe(
-      (response:any) => {
+      (response: any) => {
         this.actualites = response;
         console.log(this.actualites);
       }
     );
   }
-
-  addActualite(){
+  addActualite() {
     this.router.navigate(['/dashboard/addActualite']);
+  }
+  deleteActu(actualite: any) {
+    this.service.deleteActu(actualite.id).subscribe(response => {
+      console.log(response);
+      this.refreshListActus();
+    })
   }
 }
