@@ -9,6 +9,10 @@ export class BanqueService {
   constructor(private Http: HttpClient) { }
 
   createBanque(banque: any) {
+    //console.log("OK");
+    /*for (const [key, value] of banque.entries()) {
+      console.log(key, value);
+    }*/
    // const headers = new HttpHeaders();
    // headers.append('Content-Type', 'multipart/form-data');
     return this.Http.post(environment.baseUrl + "banques", banque);

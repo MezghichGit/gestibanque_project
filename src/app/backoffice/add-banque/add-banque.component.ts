@@ -17,9 +17,8 @@ export class AddBanqueComponent {
 
   persistBanque(banque:any){
 
-    const banqueTemp = new FormData();
-    banqueTemp.append('logo', this.selectedFile,this.selectedFile.name);
-    //provider.append('imageName',this.selectedFile.name);
+    let banqueTemp = new FormData();
+    banqueTemp.append('imageFile', this.selectedFile,this.selectedFile.name);
     banqueTemp.append('nom', banque.nom);
     banqueTemp.append('adresse', banque.adresse);
     banqueTemp.append('capital', banque.capital);
@@ -27,8 +26,9 @@ export class AddBanqueComponent {
 
     this.service.createBanque(banqueTemp).subscribe(
       data => {
-        this.router.navigate(["/dashboard/listBanque"])
         console.log(data);
+        this.router.navigate(["/dashboard/listBanque"])
+
     });
   }
 
