@@ -15,7 +15,7 @@
                       <div class="text-center">
                           <h1 class="h4 text-gray-900 mb-12">Créer une nouvelle banque !</h1>
                       </div>
-                      <form #data="ngForm"  (ngSubmit)="persistBanque(data.value)" class="user">
+                      <form #data="ngForm"  (ngSubmit)="persistBanque(data.value)" class="user" enctype="multipart/form-data">
                           <div class="form-group row">
                               <div class="col-12">
                                   Nom Banque <input type="text" ngModel name="nom" class="form-control form-control-user" id="#"
@@ -33,7 +33,7 @@
                                     placeholder="Capital banque">
                             </div>
                             <div class="col-12">
-                              Logo banque<input type="text" ngModel name="logo" class="form-control form-control-user" id="#"
+                              Logo banque<input type="file" (change)="onFileChanged($event)" ngModel name="logo" class="form-control form-control-user" id="#"
                                   placeholder="Logo banque">
                           </div>
                         </div>

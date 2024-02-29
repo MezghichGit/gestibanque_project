@@ -41,7 +41,7 @@
               <td>{{banque.nom}}</td>
               <td>{{banque.capital}}</td>
               <td>{{banque.adresse}}</td>
-              <td>{{banque.logo}}</td>
+              <td><img src="{{urlUpload}}/{{banque.logo}}" width="10%"/></td>
               <td><a class="btn btn-warning" (click)="updateBanque(banque)">Mise à jour</a></td>
               <td><a class="btn btn-danger" (click)="deleteBanque(banque)">Supprimer</a></td>
             </tr>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BanqueService } from '../../services/banque.service';
 import { Router } from '@angular/router';
+import { environment } from '../../../environments/environment.development';
 
 @Component({
   selector: 'app-list-banque',
@@ -8,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrl: './list-banque.component.css'
 })
 export class ListBanqueComponent {
+  public urlUpload = environment.urlUploadImage;
   constructor(private service: BanqueService, private router: Router) { }
   banques:any;
   ngOnInit() {
