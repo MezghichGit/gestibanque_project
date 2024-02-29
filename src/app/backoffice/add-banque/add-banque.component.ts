@@ -25,7 +25,7 @@ export class AddBanqueComponent {
     banqueTemp.append('capital', banque.capital);
 
 
-    this.service.createBanque(banque).subscribe(
+    this.service.createBanque(banqueTemp).subscribe(
       data => {
         this.router.navigate(["/dashboard/listBanque"])
         console.log(data);
