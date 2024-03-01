@@ -30,6 +30,7 @@ import { TokenInterceptorService } from '../services/token-interceptor.service';
     LogoutComponent,
     ListActualiteComponent,
     AddActualiteComponent,
+
   ],
   imports: [
     CommonModule,

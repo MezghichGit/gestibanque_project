@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+  private fragment: any;
+  constructor(private route: ActivatedRoute) {
+  }
+
 
 }

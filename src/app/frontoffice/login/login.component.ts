@@ -23,9 +23,17 @@ export class LoginComponent {
 
     this.loginservice.authenticate(this.username, this.password).subscribe(
       (data:any) => {
-        this.router.navigate(['/dashboard'])
-        this.invalidLogin = false
-       // console.log(data)
+        console.log(data.roles[0])
+        if(data.roles[0]==='SUPER_ADMIN'){
+                this.router.navigate(['/dashboard'])
+                this.invalidLogin = false
+        }
+        else if(data.roles[0]==='AGENT')
+        {
+          this.router.navigate(['/dashboardAgent'])
+                this.invalidLogin = false
+               //alert("Ok2")
+        }
       },
       (error:any) => {
         this.invalidLogin = true

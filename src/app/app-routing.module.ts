@@ -3,12 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'dashboard',
-    loadChildren: () => import('./backoffice/backoffice.module').then(m => m.BackofficeModule)
-  },
-  {
     path: 'home',
     loadChildren: () => import('./frontoffice/frontoffice.module').then(m => m.FrontofficeModule)
+  }
+  ,
+  {
+    path: 'agent',
+    loadChildren: () => import('./agent/agent.module').then(m => m.AgentModule)
+  },
+
+  {
+    path: 'dashboardClient',
+    loadChildren: () => import('./dashboard-client/dashboard-client.module').then(m => m.DashboardClientModule)
   },
   {
     path: '**',

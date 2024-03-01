@@ -21,6 +21,8 @@ export class AuthenticationService {
            sessionStorage.setItem('jwtToken', data.accessToken);
            sessionStorage.setItem('username', data.username);
            sessionStorage.setItem('email', data.email);
+           sessionStorage.setItem('nom', data.nom);
+           sessionStorage.setItem('prenom', data.prenom);
            userData = data;
            //console.log(userData)
            return userData;

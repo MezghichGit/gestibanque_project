@@ -23,11 +23,11 @@
           <nav class="site-navigation position-relative text-right" role="navigation">
 
             <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-              <li><a href="#about-section" class="nav-link">A propos de nous</a></li>
-              <li><a href="#services-section" class="nav-link">Prestations</a></li>
-              <li><a href="#blog-section" class="nav-link">Actualités</a></li>
-              <li><a href="#team-section" class="nav-link">Equipe</a></li>
-              <li><a href="#contact-section" class="nav-link">Contact</a></li>
+              <li><a (click)="scrollToSection('about-section')" class="nav-link">A propos de nous</a></li>
+              <li><a (click)="scrollToSection('services-section')" class="nav-link">Prestations</a></li>
+              <li><a (click)="scrollToSection('blog-section')" class="nav-link">Actualités</a></li>
+              <li><a (click)="scrollToSection('team-section')" class="nav-link">Equipe</a></li>
+              <li><a (click)="scrollToSection('contact-section')" class="nav-link">Contact</a></li>
               <li><a [routerLink]="['/home/login']"    class="nav-link">Connexion</a></li>
               <li><a [routerLink]="['/home/register']" class="nav-link">Créer compte</a></li>
             </ul>
@@ -127,3 +127,4 @@
       </div>
     </div>
   </div>
+  <a name="apropo"></a>

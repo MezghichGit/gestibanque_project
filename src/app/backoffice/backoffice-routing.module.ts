@@ -14,6 +14,7 @@ import { AddActualiteComponent } from './add-actualite/add-actualite.component';
 
 const routes: Routes = [
   {
+
     path: '',
     component: DashboardComponent,
     canActivate: [AuthGuardService],
@@ -66,7 +67,9 @@ const routes: Routes = [
         canActivate: [AuthGuardService]
       }
     ]
-  }
+  },
+
+
 ];
 
 @NgModule({
