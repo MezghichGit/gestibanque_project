@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { UserService } from '../../services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-agent',
@@ -7,4 +9,17 @@ import { Component } from '@angular/core';
 })
 export class ListAgentComponent {
 
+  constructor(private service: UserService, private router: Router) { }
+  agents:any;
+  ngOnInit() {
+    this.refreshListAgents();
+  }
+  refreshListAgents() {
+    this.service.getAllAgents().subscribe(
+      (response:any) => {
+        this.agents = response;
+        console.log(this.agents);
+      }
+    );
+  }
 }

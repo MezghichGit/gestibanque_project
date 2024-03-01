@@ -17,4 +17,8 @@ export class UserService {
   getAllUsers() {
     return this.Http.get(environment.baseUrl+"users");
   }
+
+  getAllAgents() {
+    return this.Http.get(environment.baseUrl+"users/agents");
+  }
 }

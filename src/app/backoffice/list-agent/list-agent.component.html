@@ -1,1 +1,66 @@
-<p>list-agent works!</p>
+<div class="container-fluid">
+
+  <!-- Page Heading -->
+ <!-- Page Heading -->
+ <h1 class="h3 mb-2 text-gray-800">Gestion des Agents</h1>
+
+ <p>Cette interface vous permetra de créer une nouvelle banque dans la base de données. Ce travail intitulé GestiBanque s'inscrit dans le cadre du projet du Cursus Java 2024</p>
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Liste des Agents</h6>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Username</th>
+              <th>Email</th>
+
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Téléphone</th>
+              <th>Photo</th>
+              <th>Mise à jour</th>
+              <th>Supprimer</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>ID</th>
+              <th>Username</th>
+              <th>Email</th>
+
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Téléphone</th>
+              <th>Photo</th>
+              <th>Mise à jour</th>
+              <th>Supprimer</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr *ngFor="let agent of  agents">
+              <td>{{agent.id}}</td>
+              <td>{{agent.username}}</td>
+              <td>{{agent.email}}</td>
+
+              <td>Nom</td>
+              <td>Prénom</td>
+              <td>Téléphone</td>
+              <th>Photo</th>
+              <td><a class="btn btn-warning">Mise à jour</a></td>
+              <td><a class="btn btn-danger">Supprimer</a></td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- /.container-fluid -->
+
