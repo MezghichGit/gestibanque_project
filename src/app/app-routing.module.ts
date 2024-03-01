@@ -8,6 +8,10 @@ const routes: Routes = [
   }
   ,
   {
+    path: 'dashboard',
+    loadChildren: () => import('./backoffice/backoffice.module').then(m => m.BackofficeModule)
+  },
+  /*{
     path: 'agent',
     loadChildren: () => import('./agent/agent.module').then(m => m.AgentModule)
   },
@@ -15,7 +19,7 @@ const routes: Routes = [
   {
     path: 'dashboardClient',
     loadChildren: () => import('./dashboard-client/dashboard-client.module').then(m => m.DashboardClientModule)
-  },
+  },*/
   {
     path: '**',
     redirectTo: 'home'
