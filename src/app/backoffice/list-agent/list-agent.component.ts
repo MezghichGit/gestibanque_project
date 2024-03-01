@@ -22,4 +22,11 @@ export class ListAgentComponent {
       }
     );
   }
+
+  deleteAgent(agent: any) {
+    this.service.deleteUser(agent.id).subscribe(response => {
+      console.log(response);
+      this.refreshListAgents()
+    })
+  }
 }

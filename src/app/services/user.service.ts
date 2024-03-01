@@ -21,4 +21,8 @@ export class UserService {
   getAllAgents() {
     return this.Http.get(environment.baseUrl+"users/agents");
   }
+
+  deleteUser(idUser: any) {
+    return this.Http.delete(environment.baseUrl + "users/" + idUser)
+  }
 }

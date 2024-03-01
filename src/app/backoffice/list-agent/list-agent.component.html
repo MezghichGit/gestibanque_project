@@ -52,7 +52,7 @@
               <td>{{agent.telephone}}</td>
               <th>{{agent.matricule}}</th>
               <td><a class="btn btn-warning">Mise à jour</a></td>
-              <td><a class="btn btn-danger">Supprimer</a></td>
+              <td><a class="btn btn-danger" (click)="deleteAgent(agent)">Supprimer</a></td>
             </tr>
 
           </tbody>
