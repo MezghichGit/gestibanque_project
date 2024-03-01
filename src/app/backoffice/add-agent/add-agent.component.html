@@ -1,50 +1,70 @@
-
 <div class="container-fluid">
 
   <!-- Page Heading -->
   <h1 class="h3 mb-2 text-gray-800">Gestion des Agents</h1>
 
-  <p>Cette interface vous permetra de créer un nouvel agent dans la base de données. Ce travail intitulé GestiBanque s'inscrit dans le cadre du projet du Cursus Java 2024</p>
+  <p>Cette interface vous permetra de créer un nouvel agent dans la base de données. Ce travail intitulé GestiBanque
+    s'inscrit dans le cadre du projet du Cursus Java 2024</p>
   <div class="card o-hidden border-0 shadow-lg my-12">
-      <div class="card-body p-0">
-          <!-- Nested Row within Card Body -->
-          <div class="row">
+    <div class="card-body p-0">
+      <!-- Nested Row within Card Body -->
+      <div class="row">
 
-              <div class="col-lg-12">
-                  <div class="p-5">
-                      <div class="text-center">
-                          <h1 class="h4 text-gray-900 mb-12">Créer un nouvel agent !</h1>
-                      </div>
-                      <form #data="ngForm"  (ngSubmit)="persistAgent(data)" class="user" enctype="multipart/form-data">
-                          <div class="form-group row">
-                              <div class="col-12">
-                                  Username Agent <input type="text" ngModel name="username" class="form-control form-control-user" id="#"
-                                      placeholder="Username">
-                              </div>
-                              <div class="col-12">
-                                Email Agent<input type="text" ngModel name="email" class="form-control form-control-user" id="#"
-                                    placeholder="Email">
-                            </div>
-                          </div>
+        <div class="col-lg-12">
+          <div class="p-5">
+            <div class="text-center">
+              <h1 class="h4 text-gray-900 mb-12">Créer un nouvel agent !</h1>
+            </div>
+            <form #data="ngForm" (ngSubmit)="persistAgent(data)" class="user" enctype="multipart/form-data">
 
-                          <div class="form-group row">
-                            <div class="col-12">
-                                Password Agent <input type="text" ngModel name="password" class="form-control form-control-user" id="#"
-                                    placeholder="Capital banque">
-                            </div>
-
-                        </div>
-
-
-                          <input type="submit" class="btn btn-primary btn-user btn-block" value="Ajouter Agent" />
-
-                      </form>
-
-                  </div>
+              <div class="form-group row">
+                <div class="col-12">
+                  Nom Agent <input type="text" ngModel name="nom" class="form-control form-control-user" id="#"
+                    placeholder="Nom">
+                </div>
+                <div class="col-12">
+                  Prénom Agent<input type="text" ngModel name="prenom" class="form-control form-control-user" id="#"
+                    placeholder="Prénom">
+                </div>
               </div>
+              <div class="form-group row">
+                <div class="col-12">
+                  Username Agent <input type="text" ngModel name="username" class="form-control form-control-user"
+                    id="#" placeholder="Username">
+                </div>
+                <div class="col-12">
+                  Email Agent<input type="text" ngModel name="email" class="form-control form-control-user" id="#"
+                    placeholder="Email">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-12">
+                  Password Agent <input type="text" ngModel name="password" class="form-control form-control-user"
+                    id="#" placeholder="Password">
+                </div>
+
+              </div>
+              <div class="form-group row">
+                <div class="col-12">
+                  Téléphone Agent <input type="text" ngModel name="telephone" class="form-control form-control-user" id="#"
+                    placeholder="Téléphone">
+                </div>
+                <div class="col-12">
+                  Matricule Agent<input type="text" ngModel name="matricule" class="form-control form-control-user" id="#"
+                    placeholder="Matricule">
+                </div>
+              </div>
+
+
+              <input type="submit" class="btn btn-primary btn-user btn-block" value="Ajouter Agent" />
+
+            </form>
+
           </div>
+        </div>
       </div>
+    </div>
   </div>
 
 </div>
-

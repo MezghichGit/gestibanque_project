@@ -26,6 +26,10 @@ export class AddAgentComponent {
       'username': myform.value.username,
       'email': myform.value.email,
       'password': myform.value.password,
+      'nom': myform.value.nom,
+      'prenom': myform.value.prenom,
+      'telephone': myform.value.telephone,
+      'matricule': myform.value.matricule,
       'role':["agent"]
     }
     console.log(this.agent);
